@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import providedData from '../data.json'
 import SalesByCategoryChart from "../components/SalesByCategoryChart.jsx";
-import AveragePriceSpentChart from "../components/AveragePriceSpentChart.jsx";
+import PriceSpentAnalysisChart from "../components/PriceSpentAnalysisChart.jsx";
 import CustomersInSalesChart from "../components/CustomersInSalesChart.jsx";
 
 function Dashboard() {
@@ -42,7 +42,7 @@ function Dashboard() {
               )}
 
               {openChart === 2 && (
-                  <AveragePriceSpentChart data={data} />
+                  <PriceSpentAnalysisChart data={data} />
               )}
 
               {openChart === 3 && (
