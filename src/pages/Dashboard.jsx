@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import providedData from '../data.json'
 import SalesByCategoryChart from "../components/SalesByCategoryChart.jsx";
 import PriceSpentAnalysisChart from "../components/PriceSpentAnalysisChart.jsx";
-import CustomersInSalesChart from "../components/CustomersInSalesChart.jsx";
+import CustomerRetentionChart from "../components/CustomerRetentionChart.jsx";
 
 function Dashboard() {
 
@@ -13,7 +13,7 @@ function Dashboard() {
     setData(providedData.orders);
   }, [])
 
-  const buttonStyle = `border rounded-lg bg-blue-600 hover:bg-blue-700 hover:scale-105 p-3 text-white w-2/5 transition cursor-pointer`;
+  const buttonStyle = `border rounded-lg bg-blue-600 hover:bg-blue-700 hover:scale-105 p-3 text-white w-3/5 transition cursor-pointer`;
 
   const handleClick = (chartNumber) => {
       setOpenChart(chartNumber);
@@ -25,7 +25,7 @@ function Dashboard() {
 
       <div className="flex flex-row gap-x-2 w-full">
 
-          <div className="flex flex-col items-center w-1/2 gap-4">
+          <div className="flex flex-col items-center w-1/3 gap-4">
 
             <span className={`text-3xl`}>Choose one from below charts:</span>
 
@@ -35,7 +35,7 @@ function Dashboard() {
 
           </div>
 
-          <div className="flex flex-col items-center justify-center w-1/2 gap-2">
+          <div className="flex flex-col items-center justify-center w-2/3 gap-2">
 
               {openChart === 1 && (
                   <SalesByCategoryChart data={data} />
@@ -46,7 +46,7 @@ function Dashboard() {
               )}
 
               {openChart === 3 && (
-                  <CustomersInSalesChart data={data} />
+                  <CustomerRetentionChart data={data} />
               )}
 
           </div>
