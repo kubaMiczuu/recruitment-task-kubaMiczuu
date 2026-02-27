@@ -13,5 +13,10 @@ Projekt napisany jest w frameworku React z stylowaniem Tailwind. Do tworzenia wy
 ## Uruchomienie projektu
 Aplikacja jest napisana lokalnie, po pobraniu należy wejść w folder projektu, otworzyc w terminalu i użyć poleceń:
 - npm install
+
+W razie konieczności użyc:
 - npm install tailwindcss @tailwindcss/vite
 - npm install recharts
+
+Uruchomić projekt należy komendą: npm run dev
+Następnie otworzyć w przeglądarce pod podanym adresem.
